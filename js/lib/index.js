@@ -5,9 +5,9 @@
 // Some static assets may be required by the custom widget javascript. The base
 // url for the notebook is not known at build time and is therefore computed
 // dynamically.
-__webpack_public_path__ = document.querySelector('body').getAttribute('data-base-url') + 'nbextensions/iiif/';
+__webpack_public_path__ = document.querySelector('body').getAttribute('data-base-url') + 'nbextensions/jupyter-iiif/';
 
-require('./iiif.css');
+require('./jupyter-iiif.css');
 require('./images/button_grouphover.png');
 require('./images/button_hover.png');
 require('./images/button_pressed.png');
@@ -46,5 +46,5 @@ require('./images/zoomout_pressed.png');
 require('./images/zoomout_rest.png');
 
 // Export widget models and views, and the npm package version number.
-module.exports = require('./iiif.js');
+module.exports = require('./jupyter-iiif.js');
 module.exports['version'] = require('../package.json').version;

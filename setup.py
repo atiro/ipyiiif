@@ -67,8 +67,8 @@ class NPM(Command):
     node_modules = os.path.join(node_root, 'node_modules')
 
     targets = [
-        os.path.join(here, 'iiif', 'static', 'extension.js'),
-        os.path.join(here, 'iiif', 'static', 'index.js')
+        os.path.join(here, 'ipyiiif', 'static', 'extension.js'),
+        os.path.join(here, 'ipyiiif', 'static', 'index.js')
     ]
 
     def initialize_options(self):
@@ -122,21 +122,22 @@ class NPM(Command):
         update_package_data(self.distribution)
 
 version_ns = {}
-with open(os.path.join(here, 'iiif', '_version.py')) as f:
+with open(os.path.join(here, 'ipyiiif', '_version.py')) as f:
     exec(f.read(), {}, version_ns)
 
 setup_args = {
-    'name': 'iiif',
+    'name': 'ipyiiif',
     'version': version_ns['__version__'],
     'description': 'A IIIF Image API viewer widget for Jupyter',
     'long_description': LONG_DESCRIPTION,
     'include_package_data': True,
     'data_files': [
-        ('share/jupyter/nbextensions/iiif', [
-            'iiif/static/extension.js',
-            'iiif/static/index.js',
-            'iiif/static/index.js.map',
-        ] + glob('iiif/static/*.png'))
+        ('share/jupyter/nbextensions/jupyter-iiif', [
+            'ipyiiif/static/extension.js',
+            'ipyiiif/static/index.js',
+            'ipyiiif/static/index.js.map',
+        ] + glob('ipyiiif/static/*.png')),
+        ('etc/jupyter/nbconfig/notebook.d', ['jupyter-iiif.json'])
     ],
     'install_requires': [
         'ipywidgets>=7.0.0',
@@ -152,7 +153,7 @@ setup_args = {
 
     'author': 'Richard Palmer',
     'author_email': 'r.palmer@vam.ac.uk',
-    'url': 'https://github.com/vanda/jupyter-widget-iiif',
+    'url': 'https://github.com/vanda/ipyiiif',
     'keywords': [
         'ipython',
         'jupyter',

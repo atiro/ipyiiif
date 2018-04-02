@@ -41,10 +41,6 @@ var HelloView = widgets.DOMWidgetView.extend({
 
     value_changed: function() {
 
-//		var container = document.createElement('div');
-//		container.id = this.cid;
-
-//		this.el.appendChild(container);
 		this.el.classList.add('jupyter-widgets');
 		this.el.classList.add('iiif-container');
 	

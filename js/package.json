@@ -1,12 +1,12 @@
 {
-  "name": "iiif",
+  "name": "jupyter-iiif",
   "version": "0.1.0",
   "description": "A IIIF Image API viewer widget for Jupyter",
   "author": "Richard Palmer",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vanda/jupyter-widget-iiif.git"
+    "url": "https://github.com/atiro/ipyiiif.git"
   },
   "keywords": [
     "jupyter",

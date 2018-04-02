@@ -21,7 +21,7 @@ module.exports = [
         entry: './lib/extension.js',
         output: {
             filename: 'extension.js',
-            path: path.resolve(__dirname, '..', 'iiif', 'static'),
+            path: path.resolve(__dirname, '..', 'ipyiiif', 'static'),
             libraryTarget: 'amd'
         }
     },
@@ -34,7 +34,7 @@ module.exports = [
         entry: './lib/index.js',
         output: {
             filename: 'index.js',
-            path: path.resolve(__dirname, '..', 'iiif', 'static'),
+            path: path.resolve(__dirname, '..', 'ipyiiif', 'static'),
             libraryTarget: 'amd'
         },
         devtool: 'source-map',
@@ -62,7 +62,7 @@ module.exports = [
             filename: 'index.js',
             path: path.resolve(__dirname, 'dist'),
             libraryTarget: 'amd',
-            publicPath: 'https://unpkg.com/iiif@' + version + '/dist/'
+            publicPath: 'https://unpkg.com/ipyiiif@' + version + '/dist/'
         },
         devtool: 'source-map',
         module: {

@@ -7,7 +7,7 @@ if (window.require) {
     window.require.config({
         map: {
             "*" : {
-                "iiif": "nbextensions/iiif/index",
+                "jupyter-iiif": "nbextensions/jupyter-iiif/index",
             }
         }
     });
