@@ -1,0 +1,40 @@
+{
+  "name": "iiif",
+  "version": "0.1.0",
+  "description": "A IIIF Image API viewer widget for Jupyter",
+  "author": "Richard Palmer",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanda/jupyter-widget-iiif.git"
+  },
+  "keywords": [
+    "jupyter",
+    "widgets",
+    "ipython",
+    "ipywidgets"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.css",
+    "images/**/*.png",
+    "dist/*.js"
+  ],
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prepublish": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^0.11.2",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.1",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "@jupyter-widgets/base": "^1.0.0",
+    "lodash": "^4.17.4",
+    "openseadragon": "^2.3.1"
+  }
+}
